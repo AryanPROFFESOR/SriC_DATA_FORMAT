@@ -100,15 +100,13 @@ To verify that `.SriC` compression does not alter the underlying latent biologic
 
 \### CGE Interneuron UMAP
 
-!\[CGE UMAP Preservation](Fig3\_UMAP\_Preservation\_CGE.png)
+!\[CGE UMAP Preservation](sric/Fig3\_UMAP\_Preservation\_CGE.png)
 
 
 
 \### MGE Interneuron UMAP
 
-!\[MGE UMAP Preservation](Fig3\_UMAP\_Preservation\_MGE.png)
-
-
+!\[MGE UMAP Preservation](sric/Fig3\_UMAP\_Preservation\_MGE.png)
 
 \*(Additional validation figures detailing lossless identity, performance bar charts, and MoM-ZINB dropout accuracy can be found in the repository).\*
 
