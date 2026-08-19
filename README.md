@@ -56,11 +56,38 @@ To verify that `.SriC` compression does not alter the underlying latent biologic
 
 *(Additional validation figures detailing lossless identity, performance bar charts, and MoM-ZINB dropout accuracy can be found in the repository).*
 
+---
+
 ## 🚀 Quick Start & CLI Usage
 
 `.SriC` comes with a highly optimized, resumable Command Line Interface (CLI) allowing anyone to stream, download, and convert massive single-cell datasets on the fly.
 
 ### 1. Installation
 Install the package directly from GitHub:
+
 ```bash
 pip install git+[https://github.com/AryanPROFFESOR/SriC_DATA_FORMAT.git](https://github.com/AryanPROFFESOR/SriC_DATA_FORMAT.git)
+```
+
+### 2. The `fetch` Command
+You can download any public `.h5ad` dataset URL. The CLI will stream the download (bypassing RAM limits) and automatically compress it into the `.sric` out-of-core format. If your internet drops, simply run the exact same command again to resume the download where it left off.
+
+```bash
+sric fetch [https://example-database.com/massive_dataset.h5ad](https://example-database.com/massive_dataset.h5ad) -o my_data.sric
+```
+
+### 3. Python API Usage
+`.SriC` is designed for out-of-core access. Instead of crashing your RAM by loading a 1-billion element matrix like standard `.h5ad` files, you leave the `.sric` file on your disk and query only what you need in microseconds.
+
+```python
+import sric
+
+# 1. Mount the dataset (Zero RAM overhead)
+data = sric.read("my_data.sric")
+
+# 2. Query a single gene's expression across 220,000 cells in microseconds
+gene_expression = data.query_gene("ENSG00000240890")
+
+# 3. Extract metadata
+cell_types = data.obs['cell_type']
+```
