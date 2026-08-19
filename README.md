@@ -55,3 +55,12 @@ To verify that `.SriC` compression does not alter the underlying latent biologic
 ![MGE UMAP Preservation](assets/Fig3_UMAP_Preservation_MGE.png)
 
 *(Additional validation figures detailing lossless identity, performance bar charts, and MoM-ZINB dropout accuracy can be found in the repository).*
+
+## 🚀 Quick Start & CLI Usage
+
+`.SriC` comes with a highly optimized, resumable Command Line Interface (CLI) allowing anyone to stream, download, and convert massive single-cell datasets on the fly.
+
+### 1. Installation
+Install the package directly from GitHub:
+```bash
+pip install git+[https://github.com/AryanPROFFESOR/SriC_DATA_FORMAT.git](https://github.com/AryanPROFFESOR/SriC_DATA_FORMAT.git)
