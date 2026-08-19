@@ -1,0 +1,19 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Build and Distribution
+build/
+dist/
+*.egg-info/
+
+# Cython compiled files
+*.c
+*.so
+*.pyd
+
+# Local Data
+*.h5ad
+*.sric

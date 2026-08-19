@@ -49,9 +49,9 @@ Performance was validated on primary biological datasets, demonstrating flawless
 To verify that `.SriC` compression does not alter the underlying latent biological structures, the original dataset's UMAP coordinates were compared against the data post-reconstruction.
 
 ### CGE Interneuron UMAP
-![CGE UMAP Preservation](sric/Fig3_UMAP_Preservation_CGE.png)
+![CGE UMAP Preservation](assets/Fig3_UMAP_Preservation_CGE.png)
 
 ### MGE Interneuron UMAP
-![MGE UMAP Preservation](sric/Fig3_UMAP_Preservation_MGE.png)
+![MGE UMAP Preservation](assets/Fig3_UMAP_Preservation_MGE.png)
 
 *(Additional validation figures detailing lossless identity, performance bar charts, and MoM-ZINB dropout accuracy can be found in the repository).*

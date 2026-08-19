@@ -21,10 +21,21 @@ exts = cythonize([
 })
 
 setup(
-    name="sric", version="3.0.0",
+    name="sric", 
+    version="3.0.0",
     packages=find_packages(exclude=["tests*", "build*"]),
     ext_modules=exts,
-    install_requires=["numpy>=1.23", "scipy>=1.9"],
-    extras_require={"anndata": ["anndata>=0.9"], "dev": ["pytest", "Cython>=3"]},
-    entry_points={"console_scripts": ["sric=sric.cli:main"]},
+    install_requires=[
+        "numpy>=1.23", 
+        "scipy>=1.9",
+        "requests",  # Required for the CLI fetch command
+        "tqdm"       # Required for the CLI progress bar
+    ],
+    extras_require={
+        "anndata": ["anndata>=0.9"], 
+        "dev": ["pytest", "Cython>=3"]
+    },
+    entry_points={
+        "console_scripts": ["sric=sric.cli:main"]
+    },
 )
